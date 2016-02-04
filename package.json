@@ -1,0 +1,10 @@
+{
+  "name": "protractor-with-Mocha",
+  "version": "1.0.0",
+  "description": "A package for E2E test framework.",
+  "author": "vincent.C.sue <gnux123@gmail.com>",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+  }
+}
