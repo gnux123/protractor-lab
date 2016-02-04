@@ -5,6 +5,6 @@
   "author": "vincent.C.sue <gnux123@gmail.com>",
   "dependencies": {
     "chai": "^3.5.0",
-    "chai-as-promised": "^5.2.0",
+    "chai-as-promised": "^5.2.0"
   }
 }

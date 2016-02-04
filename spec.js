@@ -4,18 +4,7 @@ chai.use(chaiAsPromised);
 
 var expect = chai.expect;
 
-describe('protractor Demo App', function(){
-	// var firstNum  = element(by.model('first'));
-	// var secondNum = element(by.model('second'));
-	// var goBtn = element(by.id('gobutton'));
-	// var results = element(by.binding('latest'));
-	// var history = element.all(by.repeater('result in memory'));
-	//
-	// function add(a, b){
-	// 	firstNum.sendKeys(a);
-	//     secondNum.sendKeys(b);
-	//     goBtn.click();
-	// }
+describe('網站驗證項目-首頁：', function(){
 
 	browser.ignoreSynchronization = true;
 
@@ -28,11 +17,15 @@ describe('protractor Demo App', function(){
 
 	it("確認是否有標題", function() {
 		var title = browser.getTitle();
-		expect(title).to.eventually.eq('test-123');
+		expect(title).to.eventually.eq('美國新蛋直購');
 	});
 
 	it("確認主選單項目數",function(){
-		var menuList = element.all(by.css('.mainMenu li')).count();
+		var menuTitleText = $('.toolbar h3').getText();
+		// console.log(menuTitleText);
+		expect(menuTitleText).to.eventually.eq('美國新蛋直購');
+
+		var menuList = $$('.mainMenu li').count();
 		expect(menuList).to.eventually.eq(13);
 	});
 
