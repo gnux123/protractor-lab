@@ -22,12 +22,13 @@ describe('protractor Demo App', function(){
 
 	beforeEach(function(){
 		browser.get('/');
-		browser.sleep(1600);
+		//等待頁面render時間
+		browser.sleep(3000);
 	});
 
 	it("確認是否有標題", function() {
-		// expect(browser.getTitle()).toEqual('test-123');
-		expect(browser.getTitle()).to.eventually.eq('test-123');
+		var title = browser.getTitle();
+		expect(title).to.eventually.eq('test-123');
 	});
 
 	it("確認主選單項目數",function(){
