@@ -34,3 +34,19 @@ describe('網站驗證項目-首頁：', function(){
 	});
 
 });
+
+//驗證項目2
+describe('網站驗證項目-投票驗證：', function(){
+	browser.ignoreSynchronization = true;
+	beforeEach(function(){
+		browser.get('/votes');
+		//等待頁面render時間
+		browser.sleep(3000);
+	});
+
+	it("確認是否有投票標題", function() {
+		var title = browser.getTitle();
+		expect(title).to.eventually.eq('voting');
+	});
+
+});

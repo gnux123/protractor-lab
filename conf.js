@@ -1,11 +1,16 @@
 exports.config = {
-    directConnect: true,
+    // directConnect: true,
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     baseUrl: 'http://localhost:3000',
 
     // Capabilities to be passed to the webdriver instance.
-    capabilities: {
-    'browserName': 'chrome'
-    },
+    // Capabilities : {'browserName': 'chrome' },
+
+    //多瀏覽器測試
+    multiCapabilities: [
+        { 'browserName': 'firefox' },
+        { 'browserName': 'chrome' }
+    ],
 
     // Framework to use. Jasmine is recommended.
     framework: 'mocha',
