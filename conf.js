@@ -4,7 +4,7 @@ exports.config = {
     baseUrl: 'http://localhost:3000',
 
     // Capabilities to be passed to the webdriver instance.
-    // Capabilities : {'browserName': 'chrome' },
+    // capabilities : {'browserName': 'chrome' },
 
     //多瀏覽器測試
     multiCapabilities: [
@@ -17,7 +17,7 @@ exports.config = {
 
     // Spec patterns are relative to the current working directly when
     // protractor is called.
-    specs: ['spec.js'],
+    specs: ['spec.js', 'newegg-spec.js'],
 
     // Options to be passed to Jasmine.
     // jasmineNodeOpts: {
